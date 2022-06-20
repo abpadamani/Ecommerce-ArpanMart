@@ -1,3 +1,5 @@
+import 'package:arpanmart/features/auth/screens/authscreen.dart';
+import 'package:arpanmart/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,18 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: ((settings) => generateRoute(settings)),
       title: 'ArpanMart',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Homepage(),
+      home: AuthScreen(),
     );
-  }
-}
-
-class Homepage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }
